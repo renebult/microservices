@@ -1,0 +1,51 @@
+### Say Hello Request 1
+GET http://localhost:8080/api/sayHello
+
+### Say Hello Request 2
+GET http://localhost:8080/api/sayHello
+Content-Type: application/json
+
+
+### Create an account
+POST http://localhost:8080/api/create
+Content-Type: application/json
+
+{
+  "name": "Rene Bult",
+  "email": "rene.bult@gmail.com",
+  "mobileNumber": "0612323381"
+}
+
+### Try to Create an account with erronous data
+POST http://localhost:8080/api/create
+Content-Type: application/json
+
+{
+  "name": "R",
+  "email": "rene.bultgmail.com",
+  "mobileNumber": "061232338"
+}
+
+### Fetch an account based on mobile number
+GET http://localhost:8080/api/fetch?mobileNumber=0612323381
+Accept: application/json
+
+
+### Update account based on mobile number
+PUT http://localhost:8080/api/update
+Content-Type: application/json
+
+{
+  "name": "Rene Bult",
+  "email": "rene.bult@gmail.com",
+  "mobileNumber": "0612323390",
+  "accountsDto": {
+    "accountNumber": 1651875245,
+    "accountType": "Savings",
+    "branchAddress": "1234 Main Street, New York"
+  }
+}
+
+### Delele an account based on mobile number
+DELETE http://localhost:8080/api/delete?mobileNumber=0612323380
+Accept: application/json

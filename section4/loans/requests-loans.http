@@ -1,0 +1,30 @@
+
+
+### Create loan
+POST http://localhost:8090/api/create?mobileNumber=0612323381
+
+### Try to Create  loan with erronous data
+POST http://localhost:8090/api/create?mobileNumber=06123233810
+
+
+### Fetch an loadn based on mobile number
+GET http://localhost:8090/api/fetch?mobileNumber=0612323381
+Accept: application/json
+
+
+### Update account based on mobile number
+PUT http://localhost:8090/api/update
+Content-Type: application/json
+
+{
+  "mobileNumber": "0612323381",
+  "loanNumber": "100184436158",
+  "loanType": "Car Loan",
+  "totalLoan": 100000,
+  "amountPaid": 10000,
+  "outstandingAmount": 9000
+}
+
+### Delele the loan based on mobile number
+DELETE http://localhost:8090/api/delete?mobileNumber=0612323381
+Accept: application/json

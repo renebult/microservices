@@ -1,0 +1,30 @@
+
+
+### Create Card
+POST http://localhost:9000/api/create?mobileNumber=0612323381
+
+### Try to Create Card with erronous data
+POST http://localhost:9000/api/create?mobileNumber=06123233810
+
+
+### Fetch an Card based on mobile number
+GET http://localhost:9000/api/fetch?mobileNumber=0612323381
+Accept: application/json
+
+
+### Update Card based on mobile number
+PUT http://localhost:9000/api/update
+Content-Type: application/json
+
+{
+  "mobileNumber": "0612323381",
+  "cardNumber": "100466243143",
+  "cardType": "Credit Card",
+  "totalLimit": 100000,
+  "amountUsed": 1000,
+  "availableAmount": 90000
+}
+
+### Delele the Card based on mobile number
+DELETE http://localhost:9000/api/delete?mobileNumber=0612323381
+Accept: application/json
