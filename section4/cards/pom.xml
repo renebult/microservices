@@ -62,11 +62,11 @@
 		<plugins>
 			<plugin>
 				<groupId>com.google.cloud.tools</groupId>
-				<artifactId>jib-maven-plugin</artifactId>
+				<artifactId>jib-maven-pludockgin</artifactId>
 				<version>3.4.1</version>
 				<configuration>
 					<to>
-						<image>eazybytes/${project.artifactId}:s4</image>
+						<image>rebuss/${project.artifactId}:s4</image>
 					</to>
 				</configuration>
 			</plugin>
